@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+
+<?php
+$user = "jm";
+$password = "jm";
+
+$conn = oci_connect ($user, $password, 'localhost/dbprueba'); //La tercer variable es el host y la base que se desean accesar
+
+if (!$conn) {
+    $e = oci_error();
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
+
+// valor de prueba
+$nom = 'Mario';
+
+$prueba = 'BEGIN ASD.get_CED(:nom, :asd); END;';
+
+$stid = oci_parse($conn, $prueba);
+
+// linkear los parametros
+oci_bind_by_name($stid,':nom',$nom);
+
+oci_bind_by_name($stid,':asd',$asd, 400);
+
+
+// execute
+oci_execute($stid);
+
+print "$asd\n";  
+
+oci_free_statement($stid);
+
+/*echo "<table border='1'>\n";
+while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+    echo "<tr>\n";
+    foreach ($row as $item) {
+        echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "") . "</td>\n";
+    }
+    echo "</tr>\n";
+}
+echo "</table>\n";*/
+
+?>
+        
+    </body>
+</html>
