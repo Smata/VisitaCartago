@@ -1,0 +1,67 @@
+format 75
+
+subject 128099 ""
+  xyzwh 271 20 2000 358 506
+textcanvas 128227 "VisitaCartagoMovil"
+  xyzwh 416 37 2005 99 16
+usecasecanvas 129123 usecase_ref 128483 // Administrar Reservación
+  xyzwh 362 376 3005 64 32 label_xy 335 408
+end
+usecasecanvas 129251 usecase_ref 128611 // Seguir Centro Turístico
+  xyzwh 361 291 3005 64 32 label_xy 338 323
+end
+usecasecanvas 129379 usecase_ref 128739 // Ver Información
+  xyzwh 361 218 3005 64 32 label_xy 355 250
+end
+usecasecanvas 129507 usecase_ref 128355 // Ver Galería
+  xyzwh 363 451 3005 64 32 label_xy 367 483
+end
+classcanvas 130403 class_ref 128099 // Usuario_Consumidor
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 105 177 2000
+end
+classcanvas 131683 class_ref 128227 // Sistema_Twitter
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 725 273 2000
+end
+usecasecanvas 131811 usecase_ref 128867 // PublicarTwitt
+  xyzwh 541 290 3005 64 32 label_xy 542 322
+end
+textcanvas 132067 "<<uses>>"
+  xyzwh 453 282 3011 48 14
+classcanvas 132323 class_ref 128355 // Sistema_Flickr
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 733 433 2000
+end
+usecasecanvas 132451 usecase_ref 128995 // ObtenerGalerías
+  xyzwh 544 450 3005 64 32 label_xy 537 482
+end
+usecasecanvas 132963 usecase_ref 135523 // Administrar Cuenta
+  xyzwh 363 80 3010 64 32 label_xy 349 112
+end
+usecasecanvas 134115 usecase_ref 135651 // Autenticar Usuario
+  xyzwh 363 153 3005 64 32 label_xy 350 185
+end
+line 131427 ---- decenter_begin 537
+  from ref 130403 z 3006 to ref 129379
+simplerelationcanvas 131939 simplerelation_ref 128099
+  from ref 129251 z 3006 to ref 131811
+end
+line 132195 ----
+  from ref 131683 z 3006 to ref 131811
+simplerelationcanvas 132707 simplerelation_ref 128227
+  from ref 129507 z 3006 to ref 132451
+end
+line 132835 ----
+  from ref 132323 z 3006 to ref 132451
+line 133219 ----
+  from ref 130403 z 3006 to ref 129123
+line 133731 ----
+  from ref 130403 z 3006 to ref 129251
+line 134499 ----
+  from ref 130403 z 3011 to ref 132963
+line 134627 ----
+  from ref 130403 z 3006 to ref 134115
+line 134883 ----
+  from ref 130403 z 3006 to ref 129507
+end

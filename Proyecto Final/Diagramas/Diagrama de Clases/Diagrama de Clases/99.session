@@ -1,0 +1,14 @@
+window_sizes 1366 706 320 960 595 35
+diagrams
+  active  classdiagram_ref 128099 // Diagrama de Clases
+    1040 595 100 4 0 0
+end
+show_stereotypes
+open
+  class_ref 128227 // CentroTuristico
+  class_ref 128355 // Anuncio
+  class_ref 128739 // Consumidor
+  class_ref 128867 // Reservacion
+  class_ref 128995 // Galeria
+end
+end

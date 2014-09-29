@@ -1,0 +1,10 @@
+window_sizes 1366 706 320 960 597 35
+diagrams
+  active  usecasediagram_ref 128099 // Casos de Uso
+    1040 548 100 4 0 0
+end
+show_stereotypes
+open
+  usecaseview_ref 128099 // Casos de Uso
+end
+end

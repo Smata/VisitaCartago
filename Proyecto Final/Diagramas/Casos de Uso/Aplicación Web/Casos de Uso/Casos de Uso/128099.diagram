@@ -1,0 +1,39 @@
+format 75
+
+subject 128099 ""
+  xyzwh 321 68 2000 275 392
+textcanvas 128227 "VisitaCartagoWeb"
+  xyzwh 425 89 2005 87 14
+classcanvas 128867 class_ref 128099 // Usuario_Proveedor
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 132 300 2000
+end
+classcanvas 129891 class_ref 134627 // Usuario_Administrador
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 140 125 2005
+end
+usecasecanvas 130019 usecase_ref 135267 // Administrar Cuenta
+  xyzwh 429 142 3005 64 32 label_xy 415 174
+end
+usecasecanvas 130275 usecase_ref 141795 // Autenticar Usuario
+  xyzwh 429 227 3005 64 32 label_xy 416 259
+end
+usecasecanvas 130403 usecase_ref 141923 // Administrar Anuncio
+  xyzwh 431 315 3005 64 32 label_xy 414 347
+end
+usecasecanvas 130915 usecase_ref 148451 // Ver Reservaciones
+  xyzwh 432 395 3005 64 32 label_xy 417 427
+end
+line 130147 ----
+  from ref 129891 z 3006 to ref 130019
+line 130531 ----
+  from ref 129891 z 3006 to ref 130275
+line 130659 ----
+  from ref 128867 z 3006 to ref 130275
+line 130787 ----
+  from ref 128867 z 3006 to ref 130403
+line 131043 ----
+  from ref 128867 z 3006 to ref 130915
+line 131427 ----
+  from ref 129891 z 3006 to ref 130403
+end
